@@ -7,7 +7,8 @@ class BaseModel():
 
     def __init__(self):
         """Initialize variables"""
-
+        
+        form = "%Y-%m-%dT%H:%M:%S.%f"
         self.id = str(uuid.uidd4())
         self.created_at = None
         self.updated_at = None
@@ -43,7 +44,7 @@ class BaseModel():
 
     __init__(self, *args, **kwargs):
         you will use *args, **kwargs arguments for the constructor of a BaseModel. (more information inside the AirBnB clone concept page)
-        *args won’t be used
+        *args wont be used
         if kwargs is not empty:
             each key of this dictionary is an attribute name (Note __class__ from kwargs is the only one that should not be added as an attribute. See the example output, below)
             each value of this dictionary is the value of this attribute name
