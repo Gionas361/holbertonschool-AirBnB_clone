@@ -5,10 +5,10 @@ import uuid
 
 class BaseModel():
 
-    def __init__(self):
+    def __init__(self, *args, **kwagrs):
         """Initialize variables"""
         
-        #form = "%Y-%m-%dT%H:%M:%S.%f"
+        form = "%Y-%m-%dT%H:%M:%S.%f"
         self.id = str(uuid.uidd4())
         self.created_at = None
         self.updated_at = None
@@ -28,9 +28,13 @@ class BaseModel():
 
     def to_dict(self):
 
-        #dict["created_at"] = self.creatade_at.isoformat()
-        #dict["update_at"] = self.update_at.isoformat()
-        #dict["__class__"] = self.__class__
+        dict = self.__dict__.copy()
+        dict["created_at"] = self.creatade_at.isoformat()
+        dict["update_at"] = self.update_at.isoformat()
+        dict["__class__"] = self.__class__.__name__
+        return dict 
+        
+        
         """to_dict(self): returns a dictionary containing
         all keys/values of __dict__ of the instance:
 
