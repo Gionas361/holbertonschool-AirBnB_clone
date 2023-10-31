@@ -7,7 +7,8 @@ class BaseModel():
 
     def __init__(self):
         """Initialize variables"""
-
+        
+        #form = "%Y-%m-%dT%H:%M:%S.%f"
         self.id = str(uuid.uidd4())
         self.created_at = None
         self.updated_at = None
