@@ -8,7 +8,7 @@ class BaseModel():
     def __init__(self, *args, **kwagrs):
         """Initialize variables"""
         
-        form = "%Y-%m-%dT%H:%M:%S.%f"
+        tform = "%Y-%m-%dT%H:%M:%S.%f"
         self.id = str(uuid.uidd4())
         self.created_at = None
         self.updated_at = None
