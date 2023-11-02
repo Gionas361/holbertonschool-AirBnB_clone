@@ -3,7 +3,7 @@
 from models.base_model import BaseModel
 
 
-class Usuario(BaseModel):
+class User(BaseModel):
     """the User class"""
     email = ""
     password = ""
