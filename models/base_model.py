@@ -9,27 +9,8 @@ from datetime import datetime
 class BaseModel:
     """Represents the BaseModel of the HBnB project."""
 
-    def __init__(self, *args, **kwagrs):
-        """Initialize variables"""
-
-        tform = "%Y-%m-%dT%H:%M:%S.%f"
-        self.id = str(uuid.uuid4())
-        self.created_at = None
-        self.updated_at = None
-
-    def __str__(self):
-        """__str__: should print: [<class name>]
-        (<self.id>) <self.__dict__>"""
-
-        return
-
     def __init__(self, *args, **kwargs):
-        """Initialize a new BaseModel.
-
-        Args:
-            *args (any): Unused.
-            **kwargs (dict): Key/value pairs of attributes.
-        """
+        """Initialize a new BaseModel."""
         tform = "%Y-%m-%dT%H:%M:%S.%f"
         self.id = str(uuid4())
         self.created_at = datetime.today()
@@ -49,7 +30,7 @@ class BaseModel:
         models.storage.save()
 
     def to_dict(self):
-
+        """Dictionary"""
         dict = self.__dict__.copy()
         dict["created_at"] = self.creatade_at.isoformat()
         dict["update_at"] = self.update_at.isoformat()
