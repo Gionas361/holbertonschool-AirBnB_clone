@@ -14,11 +14,7 @@ It also creates the basic dictionary for the classes and it handles the date it 
 It will handle the running of commands (EOF, all, count, create, destroy, help, quit, show, update).
 
 
-# Running the console
-
-> To start the program in interactive mode, use "./console"
-
-> To start the program in non-interactive mode use "echo '#command' | ./console"
+# Commands
 
 * **help:** *It will print out all the commands you can use and when it's followed by a console command it will print out the use of the command and the syntaxis.*
 * **EOF:** *Signals to exit the program.*
@@ -29,3 +25,46 @@ It will handle the running of commands (EOF, all, count, create, destroy, help, 
 * **quit:** *Quit command to exit the program.*
 * **show:** *Display the string representation of a class instance of a given id.*
 * **update:** *Update a class instance of a given id by adding or updating a given attribute key/value pair or dictionary.*
+
+
+# Running the console
+
+> To start the program in interactive mode, use "./console"
+
+```ruby
+$ ./console.py
+(hbnb) help
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+
+(hbnb)
+(hbnb)
+(hbnb) quit
+$
+```
+
+> To start the program in non-interactive mode use "echo '#command' | ./console"
+
+```ruby
+$ echo "help" | ./console.py
+(hbnb)
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+(hbnb)
+$
+$ cat test_help
+help
+$
+$ cat test_help | ./console.py
+(hbnb)
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+(hbnb)
+$
+```
