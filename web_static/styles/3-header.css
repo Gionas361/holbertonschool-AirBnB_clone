@@ -1,0 +1,11 @@
+header {
+    background-color: white;
+    height: 70x;
+    box-sizing: border-box;
+    border-bottom: 1px solid #CCCCCC;
+    padding: 0px 20px;
+}
+
+.logo {
+    align-content: left;
+}

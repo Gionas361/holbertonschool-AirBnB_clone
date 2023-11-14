@@ -68,3 +68,7 @@ EOF  help  quit
 (hbnb)
 $
 ```
+
+
+# Requirements (lo q tubimos q instalar)
+
